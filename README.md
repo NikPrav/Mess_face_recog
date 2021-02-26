@@ -15,7 +15,7 @@ Run the `extract_embeddings.py` file to extract Facial data<br>
 
 ``` python extract_embeddings.py```
 
-<h2>Training the Model <h2>
+<h2>Training the Model </h2>
 
 Once you've extracted the features, run the `train_model.py` to train your model to the dataset.
 
