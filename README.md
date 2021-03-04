@@ -25,4 +25,16 @@ Once you've extracted the features, run the `train_model.py` to train your model
 
 After the model training, to detect faces from video, run the `recognise_video.py` to recognise from video
 
-```pythin recognise_video.py```
+```pyth0n recognise_video.py```
+
+<h2>Node Modules</h2>
+To imprement this following program as a RESTFul api, cd into nodebase, follow all the steps until `Recognise faces`. Instead, first install the dependencies i.e 
+
+```npm i express```
+
+then do 
+
+```npm index.js```
+
+to start your API <br>
+
