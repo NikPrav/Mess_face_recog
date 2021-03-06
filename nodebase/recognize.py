@@ -106,17 +106,4 @@ def detect_fromimage(img):
 		# probability
 if sys.argv[2] == "True":
 	name,proba,faces  = detect_fromimage(sys.argv[1])
-	print(name,proba,faces)
-	# image = cv2.imread(args["image"])
-	# image = imutils.resize(image, width=600)
-	# for i in range(len(name)):
-	# 	text = "{}: {:.2f}%".format(name[i], proba[i] * 100)
-	# 	y = faces[i][1] - 10 if faces[i][1] - 10 > 10 else faces[i][1] + 10
-	# 	cv2.rectangle(image, (faces[i][0], faces[i][1]), (faces[i][2], faces[i][3]),
-	# 		(0, 0, 255), 2)
-	# 	cv2.putText(image, text, (faces[i][0], y),
-	# 		cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 0, 255), 2)
-		
-	# show the output image
-	# cv2.imshow("Image", image)
-	# cv2.waitKey(0)
+	print(name)
