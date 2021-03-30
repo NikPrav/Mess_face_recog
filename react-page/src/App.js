@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+import { Box } from "@chakra-ui/react";
+// import { extendTheme } from "@chakra-ui/react"
 import { CameraFeed } from './components/camera-feed';
 import './App.css';
 var personname = 'ab'
-// import { ThemeProvider } from "@chakra-ui/core"
 // Upload to local seaweedFS instance
+
+
 
 
 function App() {
@@ -21,9 +24,9 @@ function App() {
       const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ image: base64data })
+        body: JSON.stringify({ image: base64data, transform: 'data_transforms' })
       };
-      fetch('http://localhost:3001/recog', requestOptions)
+      fetch('http://localhost:5000/pictest', requestOptions)
         .then(response => response.text())
         .then(data => {setData(data)});
   
@@ -34,11 +37,14 @@ function App() {
   };
   const [message, setData] = useState("loading...")
   return (
-    <div className="App">
-        <h1>Image capture test</h1>
-        <p>Capture image from USB webcamera and upload to form</p>
+    <div>
+       <Box  m="8px" p="12px" w="900px" h="1100px"  textAlign="center" fontFamily="Arial" rounded="10px" borderColor="gray.300" boxShadow="md" bg="lavender">
+       <h1>Image capture test</h1>
+       <p>Capture image from USB webcamera and upload to form</p>
         <CameraFeed sendFile={uploadImage} />
         <p>{message}</p>
+      </Box>
+        
     </div>
 );
 }

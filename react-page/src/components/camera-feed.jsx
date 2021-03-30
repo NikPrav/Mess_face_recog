@@ -1,3 +1,4 @@
+import { Box } from '@chakra-ui/layout';
 import React, { Component } from 'react';
 
 export class CameraFeed extends Component {
@@ -51,9 +52,11 @@ export class CameraFeed extends Component {
     render() {
         return (
             <div className="c-camera-feed">
+                <Box bg="lavender">
                 <div className="c-camera-feed__viewer">
                     <video ref={ref => (this.videoPlayer = ref)} width="680" heigh="360" />
                 </div>
+                </Box>
                 <button onClick={this.takePhoto}>Take photo!</button>
                 <div className="c-camera-feed__stage">
                     <canvas width="680" height="360" ref={ref => (this.canvas = ref)} />
